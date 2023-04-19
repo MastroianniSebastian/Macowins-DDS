@@ -1,10 +1,10 @@
 package ar.edu.utn.frba.dds;
 
-public class Prenda{
+public class Prenda {
   private Double precio;
   private EstadoDePrenda estadoDePrenda;
 
-  public Double calcularCosto(){
+  public Double calcularCosto() {
     return estadoDePrenda.calcularCosto(this.precio);
   }
 
@@ -12,15 +12,14 @@ public class Prenda{
     return precio;
   }
 
-  public void setPrecio(Double precio) {
-    this.precio = precio;
-  }
 
   public EstadoDePrenda getEstadoDePrenda() {
     return estadoDePrenda;
   }
 
-  public void setEstadoDePrenda(EstadoDePrenda estadoDePrenda) {
+
+  public Prenda(Double precio, EstadoDePrenda estadoDePrenda) {
+    this.precio = precio;
     this.estadoDePrenda = estadoDePrenda;
   }
 }

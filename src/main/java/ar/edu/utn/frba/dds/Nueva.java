@@ -6,4 +6,7 @@ public class Nueva implements EstadoDePrenda {
   public Double calcularCosto(Double precio) {
     return precio;
   }
+
+  public Nueva() {
+  }
 }

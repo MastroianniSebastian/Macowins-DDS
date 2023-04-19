@@ -6,4 +6,6 @@ public class Liquidacion implements EstadoDePrenda {
     return precio * 0.5;
   }
 
+  public Liquidacion() {
+  }
 }

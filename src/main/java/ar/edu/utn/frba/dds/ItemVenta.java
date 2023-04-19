@@ -1,26 +1,23 @@
 package ar.edu.utn.frba.dds;
 
-public class ItemVenta{
+public class ItemVenta {
   private Integer cantidad;
   private Prenda prenda;
 
-  public Double calcularValorDeItem(){
-    return this.prenda.calcularCosto() * this.cantidad;
+  public Double calcularValorDeItem() {
+    return prenda.calcularCosto() * cantidad;
   }
 
   public Integer getCantidad() {
     return cantidad;
   }
 
-  public void setCantidad(Integer cantidad) {
-    this.cantidad = cantidad;
-  }
-
   public Prenda getPrenda() {
-    return prenda;
+    return this.prenda;
   }
 
-  public void setPrenda(Prenda prenda) {
+  public ItemVenta(Integer cantidad, Prenda prenda) {
+    this.cantidad = cantidad;
     this.prenda = prenda;
   }
 }

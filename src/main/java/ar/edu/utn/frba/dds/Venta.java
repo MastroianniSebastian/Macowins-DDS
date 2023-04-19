@@ -1,17 +1,18 @@
 package ar.edu.utn.frba.dds;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
-public class Venta{
+public class Venta {
   private LocalDate fechaDeVenta;
   private ModoDePago modoDePago;
-  private List<ItemVenta> itemsDeVenta;
+  private List<ItemVenta> itemsDeVenta = new ArrayList<>();
   private Integer cantidadCuotas;
 
-  public Double consultarTotalVenta(){
+  public Double consultarTotalVenta() {
 
-    return modoDePago.calcularCosto(this.itemsDeVenta);
+    return this.getModoDePago().calcularCosto(this.itemsDeVenta);
 
   }
 
@@ -31,13 +32,6 @@ public class Venta{
     this.modoDePago = modoDePago;
   }
 
-  public List<ItemVenta> getItemsDeVenta() {
-    return itemsDeVenta;
-  }
-
-  public void setItemsDeVenta(List<ItemVenta> itemsDeVenta) {
-    this.itemsDeVenta = itemsDeVenta;
-  }
 
   public Integer getCantidadCuotas() {
     return cantidadCuotas;
@@ -45,5 +39,8 @@ public class Venta{
 
   public void setCantidadCuotas(Integer cantidadCuotas) {
     this.cantidadCuotas = cantidadCuotas;
+  }
+
+  public Venta() {
   }
 }
