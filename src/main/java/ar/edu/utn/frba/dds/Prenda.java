@@ -22,4 +22,6 @@ public class Prenda {
     this.precio = precio;
     this.estadoDePrenda = estadoDePrenda;
   }
+
+  
 }
